@@ -7,48 +7,6 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-     <style>
-        body{
-            text-align: center;
-            background-color: cyan;
-        }
-        #inpt{
-            padding: 5px;
-            border: 2px solid black;
-            border-radius: 8px;
-        }
-        button{
-            padding: 5px;
-            background-color: blue;
-            color: beige;
-            border-radius: 5px;
-            border: 1px;
-        }
-        h1{
-            margin-top: 70px;
-        }
-        .para{
-           border: 1.5px solid black;
-           margin: 20px auto;
-           font-size: 1.2em;
-           width: 400px;
-           border-radius: 5px;
-           padding: 20px;
-           position: relative;
-        
-        }
-        .clk{
-           background-color: red;
-           color: white;
-           border: none;
-           width: 25px;
-           height: 25px;
-           position: absolute;
-           top: 1px;
-           right: 4.5px;
-           
-        }
-     </style>
 <body>
     <h1>TO LIST PROJECT</h1>
     <input type="text" id="inpt" placeholder="ENTER YOUR TEXT....">
@@ -56,38 +14,6 @@
     <div id="op">
 
     </div>
-    <script>
-    
-        let inpt = document.getElementById('inpt');
-        let btn = document.getElementById('btn');
-        let op = document.getElementById('op')
-
-        let wear = [];
-        btn.addEventListener('click',()=>{
-            wear.push(inpt.value);
-            fucon(inpt.value);
-            inpt.value ='';
-            
-        });
-        function fucon(yer){
-            let par = document.createElement('p')
-            let click = document.createElement('button')
-
-            par.innerText = yer + '';
-            click.innerText = "X";
-            par.appendChild(click)
-            op.appendChild(par);
-            par.classList.add("para");
-            click.classList.add("clk");
-             
-             par.addEventListener('click',()=>{
-                par.style.textDecoration ="line-through"
-             })
-
-            click.addEventListener('dblclick',()=>{
-                op.removeChild(par)
-            })
-        };
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
